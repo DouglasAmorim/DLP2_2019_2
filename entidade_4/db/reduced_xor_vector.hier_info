@@ -1,0 +1,23 @@
+|reduced_xor_vector
+a[0] => p01.IN0
+a[0] => y[0].DATAIN
+a[1] => p01.IN1
+a[2] => p23.IN0
+a[2] => p012.IN1
+a[3] => p23.IN1
+a[4] => p45.IN0
+a[4] => y.IN1
+a[5] => p45.IN1
+a[6] => p67.IN0
+a[6] => p456.IN1
+a[7] => p67.IN1
+y[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= p01.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= p012.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= p0123.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

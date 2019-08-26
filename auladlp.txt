@@ -1,0 +1,32 @@
+-> Entidade :addsub
+---------------------------------
+
+Arquitetura: direct_arch:
+report_path -from {Add*|data* Add*|cin} -to {Add*|combout* Add*|cout*} -npaths 30 -panel_name {Report Path}
+
+Arquitetura: Shared_arch: 
+report_path -from {Add*|data* Add*|cin src*|data*} -to {Add*|combout* Add*|cout* src*|combout*} -npaths 30 -panel_name {Report Path}
+
+Arquitetura: Manual_carry_arch:
+report_path -from {Add*|data* Add*|cin b_tmp*|data*} -to {Add*|combout* Add*|cout* b_tmp*|combout*} -npaths 30 -panel_name {Report Path}
+
+
+-> Entidade: comp2mode
+--------------------------------
+
+Arquitetura: direct_arch:
+report_path -from {LessThan*|data* LessThan*|cin agtb*|data*} -to {LessThan*|combout* LessThan*|cout* agtb*|combout*} -npaths 30 -panel_name {Report Path}
+
+Arquitetura: shared_arch
+report_path -from {LessThan*|data* LessThan*|cin agtb*|data*} -to {LessThan*|combout* LessThan*|cout* agtb*|combout*} -npaths 30 -panel_name {Report Path}
+
+-> Entidade: reduced_xor_vector
+---------------------------------
+
+Arquitetura: direct_arch
+report_path -from {y*|data* y*|cin} -to {y*|combout* y*|cout*} -npaths 30 -panel_name {Report Path}
+
+
+Arquitetura: optimal_tree_arch
+report_path -from {y*|data* y*|cin p01*|data* p012*|data* p0123*|data* p01*|cin* p012*|cin* p0123*|cin*} -to {y*|combout* y*|cout* p01*|combout* p012*|combout* p0123*|combout* p01*|cout* p012*|cout* p0123*|cout*} -npaths 30 -panel_name {Report Path}
+
